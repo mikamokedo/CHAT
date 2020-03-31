@@ -13,7 +13,7 @@ const Messages = ({messages,name}) =>{
         return xhtml;
 
     }
-
+    console.log(messages,name);
     return(
         <ScrollToBottom className="messages">
             {mapMessage()}

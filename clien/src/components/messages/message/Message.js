@@ -3,17 +3,17 @@ import './message.css';
 import ReactEmoji from 'react-emoji';
 const Message = ({message:{user,text},name}) =>{
     let currentUser= false;
-    const trimmedName = name.trim().toLowercase();
-    if(user === trimmedName){
-        currentUser= true;
-    }
-
+    const trimmedName = name.trim().toLowerCase();
+    // if(user === trimmedName){
+    //     currentUser= true;
+    // }
+  console.log(name);
 
     return(
         currentUser ? 
         (
             <div className="messageContainer justifyEnd">
-            <p className="sentText pr-10">{trimmedName}</p>
+            {/* <p className="sentText pr-10">{trimmedName}</p> */}
             <div className="messageBox backgroundBlue">
               <p className="messageText colorWhite">{ReactEmoji.emojify(text)}</p>
             </div>
